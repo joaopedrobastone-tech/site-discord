@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Servidor do Discord - João Pedro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #09090b;
+      color: #ffffff;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .caixa {
+      background-color: #141417;
+      border: 1px solid #27272a;
+      max-width: 500px;
+      width: 100%;
+      padding: 36px;
+      border-radius: 16px;
+      text-align: center;
+    }
+    .banner {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+    p {
+      color: #a1a1aa;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .botoes {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+    }
+    .btn-discord {
+      background-color: #5865f2;
+    }
+    .btn-discord:hover {
+      background-color: #4752c4;
+    }
+    .btn-youtube {
+      background-color: #ff0000;
+    }
+    .btn-youtube:hover {
+      background-color: #cc0000;
+    }
+    .btn-roblox {
+      background-color: #2563eb;
+    }
+    .btn-roblox:hover {
+      background-color: #1d4ed8;
+    }
+    .btn-copiar {
+      background-color: #27272a;
+      border: 1px solid #3f3f46;
+    }
+    .btn-copiar:hover {
+      background-color: #3f3f46;
+    }
+    .btn-apoiar {
+      background-color: #10b981;
+      color: #09090b;
+    }
+    .btn-apoiar:hover {
+      background-color: #34d399;
+    }
+  </style>
+</head>
+<body>
+  <div class="caixa">
+    <img class="banner" src="banner.jpg" alt="Banner do servidor">
+    <h1>Comunidade do João Pedro</h1>
+    <p>Entre no nosso servidor do Discord para conversar, jogar Roblox e acompanhar os vídeos do canal!</p>
+    <div class="botoes">
+      <a class="btn btn-discord" href="https://discord.gg/qBF5Tfh2x" target="_blank">Ir para o server</a>
+      <a class="btn btn-youtube" href="https://www.youtube.com/@JoaoPedroBelentaniAstone" target="_blank">Conta no YouTube</a>
+      <a class="btn btn-roblox" href="https://www.roblox.com/pt/users/5542915093/profile" target="_blank">Minha conta no Roblox</a>
+      <button class="btn btn-copiar" id="btnCopiar" onclick="copiarLink()">Copiar link do Discord</button>
+      <a class="btn btn-apoiar" href="apoio.html">Contribuir para a programação</a>
+    </div>
+  </div>
+
+  <script>
+    function copiarLink() {
+      navigator.clipboard.writeText("https://discord.gg/qBF5Tfh2x");
+      const botao = document.getElementById("btnCopiar");
+      botao.innerText = "Link copiado!";
+      botao.style.backgroundColor = "#16a34a";
+
+      setTimeout(() => {
+        botao.innerText = "Copiar link do Discord";
+        botao.style.backgroundColor = "#27272a";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
